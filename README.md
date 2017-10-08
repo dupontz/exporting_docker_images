@@ -7,7 +7,7 @@ e.g. ``` IDS=$(docker images | awk '{if ($1 ~ /^(centos)/) print $1}')```
 
 Obs: Make sure to get the name of image otherwise the exported image won't have their original name or tag.
 
-## 2. Export the image STDOUT (no output file)
+## 2. Export images STDOUT (no output file)
 
 e.g. ``` for x in $IDS;do  docker save $x | ssh username@host 'docker load';done```
 
